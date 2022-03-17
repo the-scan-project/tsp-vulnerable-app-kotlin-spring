@@ -1,2 +1,8 @@
 # IDE
 .idea/
+
+# Build
+.gradle/
+gradle/
+build/
+gradlew*
