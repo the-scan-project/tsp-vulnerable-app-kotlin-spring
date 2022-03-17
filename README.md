@@ -14,9 +14,9 @@ This project uses:
 
 ## Security issues
 
-| Vulnerability Type                                                           | Description                                                                                                                                                                   | Location                                         | PoC Command                                                          |
-|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|----------------------------------------------------------------------|
-| [Cross Site Scripting (XSS)](https://cwe.mitre.org/data/definitions/79.html) | `HelloController` generates page output in code. It expects a name as a parameter to say `"Hello, $name"` and just concatenates user input to the output without escaping it. | `return "Hello, $name"`                          | <http://localhost:8080/hello?name=%3Cscript%3Ealert(1)%3C/script%3E> | 
+| Vulnerability Type | Description | Location | PoC Command |
+|--------------------|-------------|----------|-------------|
+| --                 | --          | --       | --          | 
 
 ### Other issues
 

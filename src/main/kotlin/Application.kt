@@ -2,6 +2,7 @@ package me.samoylenko.examples.vulnerable
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.http.MediaType
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,7 +14,7 @@ class Application
 
 @RestController
 class HelloController {
-    @GetMapping("/hello")
+    @GetMapping(value = ["/hello"], produces = [MediaType.TEXT_PLAIN_VALUE])
     fun hello(@RequestParam name: String): String {
         return "Hello, $name"
     }
